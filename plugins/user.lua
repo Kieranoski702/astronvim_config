@@ -9,4 +9,9 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {"ellisonleao/gruvbox.nvim", lazy = false},
+  {"mbbill/undotree", lazy = false},
+  {'theprimeagen/harpoon', lazy = false},
+  {"folke/zen-mode.nvim", lazy = false},
+  {"github/copilot.vim", lazy = false},
 }

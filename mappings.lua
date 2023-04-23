@@ -20,6 +20,19 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>z"] = { name = "Custom"},
+    ["<leader>zu"] = {
+      function()
+        vim.cmd.UndotreeToggle()
+      end,
+      desc = "Toggle undo tree",
+    },
+    ["<leader>zz"] = {
+      function()
+        require('zen-mode').toggle()
+      end, 
+      desc = "Toggle zen mode",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
