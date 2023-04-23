@@ -16,9 +16,7 @@ return {
 	{
 		"github/copilot.vim",
 		lazy = false,
-		ini AstroNvim User Configuration Example
-
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)t = function()
+		init = function()
 			vim.g.copilot_no_tab_map = true
 			vim.g.copilot_assume_mapped = true
 			vim.g.copilot_tab_fallback = ""
