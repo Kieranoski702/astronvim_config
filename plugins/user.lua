@@ -9,10 +9,20 @@ return {
 	--     require("lsp_signature").setup()
 	--   end,
 	-- },
-	{ "ellisonleao/gruvbox.nvim", lazy = false },
-	{ "mbbill/undotree",          lazy = false },
-	{ 'theprimeagen/harpoon',     lazy = false },
-	{ "folke/zen-mode.nvim",      lazy = false },
+	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			italic = {
+				strings = false,
+				comments = false,
+			},
+		},
+	},
+	{ "mbbill/undotree",      lazy = false },
+	{ 'theprimeagen/harpoon', lazy = false },
+	{ "folke/zen-mode.nvim",  lazy = false },
 	{
 		"github/copilot.vim",
 		lazy = false,
