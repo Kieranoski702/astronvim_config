@@ -12,9 +12,7 @@ return {
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
     }
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities.offsetEncoding = "utf-16"
-    require("lspconfig").clangd.setup({ capabilities = capabilities })
+    config.offset_encoding = { "utf-16" }
     return config -- return final config table
   end,
 }
