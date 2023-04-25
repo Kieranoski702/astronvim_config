@@ -6,16 +6,16 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
-        'tsserver',
-        'eslint',
-        'lua_ls',
-        'rust_analyzer',
-        'clangd',
-        'cssls',
-        'hls',
-        'html',
-        'bashls',
-        'marksman'
+        "tsserver",
+        "eslint",
+        "lua_ls",
+        "rust_analyzer",
+        "clangd",
+        "cssls",
+        "hls",
+        "html",
+        "bashls",
+        "marksman",
       },
     },
   },
@@ -24,14 +24,14 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = { "prettier", "stylua", "clang-format" },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      -- ensure_installed = { "python" },
+      ensure_installed = { "python", "cppdbg", "bash", "js" },
     },
   },
 }

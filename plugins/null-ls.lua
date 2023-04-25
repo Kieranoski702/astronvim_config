@@ -11,6 +11,7 @@ return {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
+      -- null_ls.builtins.formatting.clang_format,
     }
     config.offset_encoding = { "utf-16" }
     return config -- return final config table
