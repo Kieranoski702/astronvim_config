@@ -23,6 +23,7 @@ return {
 	{ "mbbill/undotree",      lazy = false },
 	{ "theprimeagen/harpoon", lazy = false },
 	{ "folke/zen-mode.nvim",  lazy = false },
+	{ "andweeb/presence.nvim" },
 	-- {
 	-- 	"github/copilot.vim",
 	-- 	lazy = false,
