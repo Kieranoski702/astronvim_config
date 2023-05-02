@@ -25,4 +25,5 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.media.vim-wakatime" },
+  { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
 }
