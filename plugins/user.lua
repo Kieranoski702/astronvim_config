@@ -20,7 +20,8 @@ return {
       },
     },
   },
-  { "mbbill/undotree", lazy = false },
+  { "mbbill/undotree",                lazy = false },
+  { "christoomey/vim-tmux-navigator", lazy = false },
   -- { "theprimeagen/harpoon", lazy = false },
   -- { "folke/zen-mode.nvim",  lazy = false },
   -- {

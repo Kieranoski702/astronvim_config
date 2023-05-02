@@ -11,10 +11,9 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
-          require("astronvim.utils.buffer").close(
-            bufnr)
-        end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
@@ -25,17 +24,18 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>z"] = { name = "Custom" },
     ["<leader>zu"] = {
-      function()
-        vim.cmd.UndotreeToggle()
-      end,
+      function() vim.cmd.UndotreeToggle() end,
       desc = "Toggle undo tree",
     },
     ["<leader>zz"] = {
-      function()
-        require('zen-mode').toggle()
-      end,
+      function() require("zen-mode").toggle() end,
       desc = "Toggle zen mode",
     },
+    -- add overwrite mapping for vim-tmux-navigator
+    ["<C-h>"] = { ":TmuxNavigateLeft<CR>", desc = "window left" },
+    ["<C-l>"] = { ":TmuxNavigateRight<CR>", desc = "window right" },
+    ["<C-k>"] = { ":TmuxNavigateUp<CR>", desc = "window up" },
+    ["<C-j>"] = { ":TmuxNavigateUp<CR>", desc = "window down" },
   },
   t = {
     -- setting a mapping to false will disable it
