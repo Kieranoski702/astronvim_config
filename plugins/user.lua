@@ -22,6 +22,7 @@ return {
   },
   { "mbbill/undotree",                lazy = false },
   { "christoomey/vim-tmux-navigator", lazy = false },
+  { "tpope/vim-obsession" },
   -- { "theprimeagen/harpoon", lazy = false },
   -- { "folke/zen-mode.nvim",  lazy = false },
   -- {
