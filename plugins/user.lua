@@ -23,6 +23,7 @@ return {
   { "mbbill/undotree",                lazy = false },
   { "christoomey/vim-tmux-navigator", lazy = false },
   { "tpope/vim-obsession" },
+  { "jbyuki/instant.nvim" },
   -- { "theprimeagen/harpoon", lazy = false },
   -- { "folke/zen-mode.nvim",  lazy = false },
   -- {
