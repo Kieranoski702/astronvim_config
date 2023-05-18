@@ -24,6 +24,9 @@ return {
   { "christoomey/vim-tmux-navigator", lazy = false },
   { "tpope/vim-obsession" },
   { "jbyuki/instant.nvim" },
+  { "MunifTanjim/nui.nvim" },
+  { "ShinKage/idris2-nvim" },
+
   -- { "theprimeagen/harpoon", lazy = false },
   -- { "folke/zen-mode.nvim",  lazy = false },
   -- {
