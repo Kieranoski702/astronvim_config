@@ -26,5 +26,6 @@ return {
       "typescript",
       "yaml",
     },
+    auto_install = true,
   },
 }
