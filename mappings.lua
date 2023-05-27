@@ -31,6 +31,10 @@ return {
       function() require("zen-mode").toggle() end,
       desc = "Toggle zen mode",
     },
+    ["<leader>zc"] = {
+      function() require("chatgpt").openChat() end,
+      desc = "Open ChatGPT window",
+    },
     -- add overwrite mapping for vim-tmux-navigator
     ["<C-h>"] = { ":TmuxNavigateLeft<CR>", desc = "window left" },
     ["<C-l>"] = { ":TmuxNavigateRight<CR>", desc = "window right" },
@@ -40,5 +44,11 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  v = {
+    ["<leader>e"] = {
+      function() require("chatgpt").edit_with_instructions() end,
+      desc = "Edit with instructions",
+    },
   },
 }
