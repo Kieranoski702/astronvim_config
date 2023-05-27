@@ -27,4 +27,5 @@ return {
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
   { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.docker" },
 }
