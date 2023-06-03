@@ -43,6 +43,8 @@ return {
       "nvim-telescope/telescope.nvim",
     },
   },
+  { "quarto-dev/quarto-nvim" },
+  { "jmbuhr/otter.nvim" },
 
   -- { "theprimeagen/harpoon", lazy = false },
   -- { "folke/zen-mode.nvim",  lazy = false },
