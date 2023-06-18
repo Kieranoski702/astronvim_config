@@ -26,23 +26,23 @@ return {
   { "jbyuki/instant.nvim" },
   { "MunifTanjim/nui.nvim" },
   { "ShinKage/idris2-nvim" },
-  {
-    "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup {
-        api_key_cmd = "gpg --decrypt ~/chat_gpt_secret1.txt.gpg 2>/dev/null",
-        popup_input = {
-          submit = "<C-s>",
-        },
-      }
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("chatgpt").setup {
+  --       api_key_cmd = "gpg --decrypt ~/chat_gpt_secret1.txt.gpg 2>/dev/null",
+  --       popup_input = {
+  --         submit = "<C-s>",
+  --       },
+  --     }
+  --   end,
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  -- },
   { "quarto-dev/quarto-nvim" },
   { "jmbuhr/otter.nvim" },
 
