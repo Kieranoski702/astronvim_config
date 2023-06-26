@@ -76,9 +76,31 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    -- Fix clangd error for utf-16 encoding
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.offsetEncoding = { "utf-16" }
     require("lspconfig").clangd.setup { capabilities = capabilities }
+    -- Setup idris2 lsp
     require("idris2").setup {}
+    -- Set rust analyzer to use clippy on save instead of cargo check
+    require("rust-tools").setup {
+      server = {
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = {
+              allFeatures = true,
+              overrideCommand = {
+                "cargo",
+                "clippy",
+                "--workspace",
+                "--message-format=json",
+                "--all-targets",
+                "--all-features",
+              },
+            },
+          },
+        },
+      },
+    }
   end,
 }
