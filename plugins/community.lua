@@ -28,4 +28,7 @@ return {
   { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.cs" },
+  { import = "astrocommunity.pack.html-css" },
 }
