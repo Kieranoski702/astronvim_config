@@ -22,6 +22,11 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- Create floating window for error diagnostic
+    ["<leader>m"] = {
+      function() vim.diagnostic.open_float() end,
+      desc = "Open diagnostic float window",
+    },
     ["<leader>z"] = { name = "Custom" },
     ["<leader>zu"] = {
       function() vim.cmd.UndotreeToggle() end,
