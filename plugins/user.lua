@@ -62,6 +62,13 @@ return {
       "Glgrep",
       "Gedit",
     },
+    {
+      "lambdalisue/suda.vim",
+      cmd = {
+        "SudaRead",
+        "SudaWrite",
+      },
+    },
   },
 
   -- { "theprimeagen/harpoon", lazy = false },
