@@ -90,3 +90,20 @@ If mason fails to install haskell-debug-adapter make sure your stack index is up
 ```shell
 stack update
 ```
+
+#### A note about markdown-preview
+
+Requires bit does install tslib in it's own download directory
+
+run:
+
+```bash
+cd /home/kfowlds/.local/share/nvim/lazy/markdown-preview.nvim/
+npm install tslib
+```
+
+If this causes issue with updating the plugin in the future then remove with:
+
+```bash
+npm uninstall tslib
+```
