@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.pack.haskell" },
   { import = "astrocommunity.pack.bash" },
