@@ -20,7 +20,7 @@ return {
       },
     },
   },
-  { "mbbill/undotree",                lazy = false },
+  { "mbbill/undotree", lazy = false },
   { "christoomey/vim-tmux-navigator", lazy = false },
   { "tpope/vim-obsession" },
   { "jbyuki/instant.nvim" },
@@ -77,6 +77,10 @@ return {
           -- Configuration here, or leave empty to use defaults
         }
       end,
+    },
+    {
+      "sickill/vim-pasta",
+      config = function() vim.g["pasta_enabled_filetypes"] = { "python" } end,
     },
   },
 
