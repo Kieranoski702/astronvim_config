@@ -84,9 +84,22 @@ return {
       augroup END
     ]]
     -- Fix clangd error for utf-16 encoding
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities.offsetEncoding = { "utf-16" }
-    require("lspconfig").clangd.setup { capabilities = capabilities }
+    -- local capabilities = vim.lsp.protocol.make_client_capabilities()
+    -- capabilities.offsetEncoding = { "utf-16" }
+    -- require("lspconfig").clangd.setup { capabilities = capabilities }
+    local cmp_nvim_lsp = require "cmp_nvim_lsp"
+    require("lspconfig").clangd.setup {
+      on_attach = on_attach,
+      capabilities = cmp_nvim_lsp.default_capabilities(),
+      cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+      },
+    }
+    -- This may not be needed to fix the issue and mat break other null-ls sources
+    require("null-ls").setup {
+      on_init = function(new_client, _) new_client.offset_encoding = "utf-16" end,
+    }
     -- Setup idris2 lsp
     require("idris2").setup {}
     -- Set rust analyzer to use clippy on save instead of cargo check
