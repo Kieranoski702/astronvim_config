@@ -82,6 +82,10 @@ return {
       "sickill/vim-pasta",
       config = function() vim.g["pasta_enabled_filetypes"] = { "python" } end,
     },
+    {
+      "EtiamNullam/deferred-clipboard.nvim",
+      config = function() require("deferred-clipboard").setup {} end,
+    },
   },
 
   -- { "theprimeagen/harpoon", lazy = false },
