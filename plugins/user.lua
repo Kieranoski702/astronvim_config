@@ -86,6 +86,12 @@ return {
       "EtiamNullam/deferred-clipboard.nvim",
       config = function() require("deferred-clipboard").setup {} end,
     },
+    {
+      "akinsho/git-conflict.nvim",
+      lazy = false,
+      version = "*",
+      config = true,
+    },
   },
 
   -- { "theprimeagen/harpoon", lazy = false },
