@@ -32,4 +32,5 @@ return {
   { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
 }

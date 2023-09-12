@@ -40,6 +40,8 @@ return {
       function() require("chatgpt").openChat() end,
       desc = "Open ChatGPT window",
     },
+    ["<leader>zs"] = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = "Search and replace" },
+
     -- add overwrite mapping for vim-tmux-navigator
     ["<C-h>"] = { ":TmuxNavigateLeft<CR>", desc = "window left" },
     ["<C-l>"] = { ":TmuxNavigateRight<CR>", desc = "window right" },
@@ -54,6 +56,25 @@ return {
     ["<leader>e"] = {
       function() require("chatgpt").edit_with_instructions() end,
       desc = "Edit with instructions",
+    },
+    -- Take visual selection and replace all occurrences in the file. First yank
+    -- to useless register, the use it in the search and replace command.
+    ["<leader>s"] = {
+      function()
+        -- Yank the visual selection to register "z"
+        vim.api.nvim_command 'normal! "zy'
+
+        -- Open the command line and add it to search and replace command then allow
+        -- user to edit it.
+        vim.fn.feedkeys ":%s/"
+        vim.fn.feedkeys(vim.fn.getreg "z") -- Paste the content of register "z"
+        vim.fn.feedkeys "/"
+        vim.fn.feedkeys(vim.fn.getreg "z") -- Paste the content of register "z"
+        vim.fn.feedkeys "/gI"
+        -- Move the cursor to the left to allow user to edit the command.
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Left><Left><Left>", true, true, true), "n", true)
+      end,
+      desc = "Search and replace",
     },
   },
 }
