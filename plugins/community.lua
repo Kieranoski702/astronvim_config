@@ -22,7 +22,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.python-ruff" },
-  -- { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.toml" },
   -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.yaml" },
