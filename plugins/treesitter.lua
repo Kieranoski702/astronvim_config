@@ -26,6 +26,11 @@ return {
       "typescript",
       "yaml",
     },
+    highlight = {
+      enable = true,
+      disable = { "latex" },
+    },
+
     auto_install = true,
   },
 }

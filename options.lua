@@ -19,6 +19,7 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     instant_username = "Kieranoski", -- set the username for instant neovim plugin
     vimtex_view_method = "zathura", -- set the pdf viewer for vimtex
+    vimtex_syntax_enabled = 1, -- enable syntax highlighting in vimtex
   },
 }
 -- If you need more control, you can use the function()...end notation
