@@ -12,6 +12,9 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     -- opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ocamllsp" }) end,
+    opts = function(_, opts)
+      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ltex", "texlab" })
+    end,
   },
   {
     "jay-babu/mason-null-ls.nvim",
