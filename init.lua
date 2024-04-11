@@ -96,6 +96,15 @@ return {
         "--offset-encoding=utf-16",
       },
     }
+    -- Change ltex lsp language to en-GB for spell checking
+    local ltex_opts = {
+      settings = {
+        ltex = {
+          language = "en-GB",
+        },
+      },
+    }
+    require("lspconfig")["ltex"].setup(ltex_opts)
     -- This may not be needed to fix the issue and mat break other null-ls sources
     require("null-ls").setup {
       on_init = function(new_client, _) new_client.offset_encoding = "utf-16" end,
